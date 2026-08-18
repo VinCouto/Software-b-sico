@@ -1,0 +1,11 @@
+
+O x86-64 é little ou big-endian?
+R:x86-64 eh little-endian
+
+O endianess do assembly é necessariamente o mesmo endianess do hexadecimal?
+R: Como o hexadecimal é só uma tradução do assembly e não uma (re)compilação,
+ele deve necesáriamente ser o mesmo endianess, além de que os dois estão na mesma
+arquitetura logo, deverá ser mesmo endianess.
+
+Qual dos arquivos representa o endianess real da máquina?
+R: Os dois, porque o endianess do assembly tm quer estar de acordo com o da máquina
