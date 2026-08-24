@@ -1,0 +1,13 @@
+2. As últimas linhas do programa de exemplo são equivalente a um return 0 de um programa em C.
+a. Verifique que foi realmente esse o valor retornado ao Sistema Operacional.
+
+Resposta:
+Podemos utilizar o comando 
+"echo $?"
+no terminal após rodar nossa programa e ver que ele realmente nos retorna 0.
+
+
+b. Modifique esse valor, monte, e verifique novamente.
+
+Resposta:
+Ao fazer a mesma coisa com o novo código veremos que ele retorna o númeoro 9.

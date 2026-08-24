@@ -1,0 +1,5 @@
+Ao rodá-los com o mesmo código fornecido pelo arquivo 
+" gcc -O1 -S programa.c"
+
+podemos ver q eles realmente acabam por serem os mesmos com as mesmas intruções
+  
