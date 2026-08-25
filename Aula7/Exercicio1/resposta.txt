@@ -1,0 +1,65 @@
+1. Execute o programa da aula anterior (Ola) passo a passo com o GDB. Insira um breakpoint na instrução de comparação e
+verifique a cada passo o char armazenado na memória sendo comparado, e o resultado da comparação armazenado em eflags.
+
+Resposta: 
+    Se colocarmos um breakpoint na linha 23 onde há a comparação do char com o numero 0, colocarmo0s mais um breakpoint
+    logo antes do final do programa, e executarmos breakpoint à breakpoint, poderemos ver o endereço de memoria a ser 
+    comparado mudando, bem como poderemos ver as suas eflags mudando.
+
+    Breakpoint 1, while () at ola.s:23
+23	    cmpb $0,(%rsi) #o valor na posição de memória é \0?
+(gdb) i r rsi
+rsi            0x402004            4202500
+(gdb) i r eflags
+eflags         0x203               [ CF IF ]
+(gdb) c
+Continuing.
+O
+Breakpoint 1, while () at ola.s:23
+23	    cmpb $0,(%rsi) #o valor na posição de memória é \0?
+(gdb) i r rsi
+rsi            0x402005            4202501
+(gdb) i r eflags
+eflags         0x206               [ PF IF ]
+(gdb) c
+Continuing.
+l
+Breakpoint 1, while () at ola.s:23
+23	    cmpb $0,(%rsi) #o valor na posição de memória é \0?
+(gdb) i r rsi
+rsi            0x402006            4202502
+(gdb) i r eflags
+eflags         0x206               [ PF IF ]
+(gdb) c
+Continuing.
+a
+Breakpoint 1, while () at ola.s:23
+23	    cmpb $0,(%rsi) #o valor na posição de memória é \0?
+(gdb) i r rsi
+rsi            0x402007            4202503
+(gdb) i r eflags
+eflags         0x202               [ IF ]
+(gdb) c
+Continuing.
+
+
+Breakpoint 1, while () at ola.s:23
+23	    cmpb $0,(%rsi) #o valor na posição de memória é \0?
+(gdb) i r rsi
+rsi            0x402008            4202504
+(gdb) i r eflags
+eflags         0x202               [ IF ]
+(gdb) c
+Continuing.
+
+Breakpoint 2, fimLoop () at ola.s:33
+33	    popq %rbp #fim do epílogo
+(gdb) i r rsi
+rsi            0x402008            4202504
+(gdb) i r eflags
+eflags         0x246               [ PF ZF IF ]
+(gdb) c
+
+
+A principal flag para ir para o final do programa é a [ZF] (zero flag), que indica que o endereço de memoria já não tem mais char
+para se comparar.
