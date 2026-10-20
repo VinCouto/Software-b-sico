@@ -1,0 +1,18 @@
+Quando queremos fazer uma ABI nova temos que pensar em algumas coisas que temos
+que definir, entre elas:
+
+Definir função de cada um dos 16 registradores;
+
+Definir quais syscalls a ABI terá;
+Definir o código de cada uma dessas syscalls;
+Definir os parâmetros de cada syscall(end de retorno, codigo, estados regs, etc..);
+
+
+Considere um programa x86-64. Por que motivo caso ele tenha sido compilado para Windows, ele não funciona no
+Linux, por exemplo? O que um emulador, VM ou afim está fazendo para compatibilizar as coisas?
+
+Resposta:
+O que a VM faz nada mais é do que reinterpretar os códigos da sycalls de um sistema
+para outro, isso se obviamente eles tiverem a mesma arquitetura, porque se for
+diferente uma da outra o processo é um pouco mais complicado e reinterpretação
+de binário bruto também porque aí até a parte física é diferente.
