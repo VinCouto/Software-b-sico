@@ -1,0 +1,22 @@
+1. Suponha que você está escrevendo a rotina do S.O. que gerencia as syscalls. Descreva, em ordem, o que
+exatamente essa rotina precisa fazer para realizar o tratamento.
+
+Resposta:
+
+Primeira coisa que deve ser feita é o salvamento do estado dos regitradores da aplicação
+do usuário.
+
+Após isso se deve ver o codigo que está em %rax para mostrar ao kernel qual sycall foi
+solicitado, e verifica se os argumentos dos parametros são validos
+
+Depois disso se executa a rotina do kernel e armazena o resultado da operação em %rax
+
+Depois restaura o contexto do usuário e só depois de tudo sai do modo de kernel e volta 
+ao modo de usuário 
+
+a. Sem olhar no manual Intel, o que você espera que a instrução de Syscall salve de útil para o S.O. usar?
+
+Resposta:
+
+Se espera que ele guarde o endereço de retorno para a proxima instrução do programa
+e salve também as RFLAGS para q ele possa manipular elas livremente durante a rotina

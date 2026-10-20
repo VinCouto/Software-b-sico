@@ -1,0 +1,19 @@
+1. Faça e monte o exemplo da aula. Desmonte o binário final com objdump -D, e verifique que as constantes de
+deslocamento nos leaqs realmente estão mudando.
+
+Resposta:
+Como podemos ver no trecho da main no objdump
+
+0000000000401126 <main>:
+  401126:	55                   	push   %rbp
+  401127:	48 89 e5             	mov    %rsp,%rbp
+  40112a:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 401131 <main+0xb>
+  401131:	48 8d 3d cc 0e 00 00 	lea    0xecc(%rip),%rdi        # 402004 <printFormat>
+  401138:	b8 00 00 00 00       	mov    $0x0,%eax
+  40113d:	e8 ee fe ff ff       	call   401030 <printf@plt>
+  401142:	b8 00 00 00 00       	mov    $0x0,%eax
+  401147:	48 89 ec             	mov    %rbp,%rsp
+  40114a:	5d                   	pop    %rbp
+  40114b:	c3                  
+
+os leaq reslmente vão mudando conforme vai passando o programa

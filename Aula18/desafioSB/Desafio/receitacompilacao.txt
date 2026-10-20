@@ -1,0 +1,6 @@
+
+Para compilar o desafio.c basta apenas colocar o código abaixo no terminal aonde
+se encontra o desafio.c
+
+
+gcc -O0 -fno-stack-protector -no-pie desafio.c -o desafio
