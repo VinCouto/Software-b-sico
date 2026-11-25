@@ -1,0 +1,6 @@
+#include <stdio.h>
+
+int main() {
+  puts("Ola mundo");
+return 0;
+}
