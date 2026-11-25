@@ -1,0 +1,11 @@
+nm mat.o
+0000000000000000 T soma
+
+nm console.o
+0000000000000000 T imprimirResultado
+                 U printf
+                 
+nm main.o
+                 U imprimirResultado
+0000000000000000 T main
+                 U soma

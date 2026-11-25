@@ -1,0 +1,105 @@
+O endereço sp atual é: -188544544
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544568
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544592
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544616
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544640
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544664
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544688
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544712
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544736
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544760
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544784
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544808
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544832
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544856
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544880
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544904
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544928
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544952
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188544976
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188545000
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188545024
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188545048
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188545072
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188545096
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188545120
+A chamada atual é a: 847831712
+GNU significa GNU's not linux 
+GNU por sua vez significa
+O endereço sp atual é: -188545144
+Falha de segmentação (imagem do núcleo gravada)
+
+
+Aqui podemos ver em qual chamada deu stack overflow e em qual endereço o SP estava

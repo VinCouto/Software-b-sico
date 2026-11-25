@@ -1,0 +1,32 @@
+o malloc e o free operam no espaço de usuario, e eles mantem as estruturas de 
+controle no espaço de usuario mesmo.
+Existem algumas maneiras que eles controlam e aproveitam o espaço, de começo é 
+bom falar que todo bloco de memoria costuma carregar metadados, geralmente 
+alinhados em multiplos de 16, quando um bloco de memoria é liberado, esse espaço
+é reaproveitado para guardar esses metadados.
+Outra forma de organização é deixar os blocos de memoria em listas, Knuth usa-se
+da lista duplamente encadeada para poder remover blocos do meio da lista ou até 
+mesmo fundir blocos.
+Blocos de memoria podem manter informações no começo e no final de si, como se 
+fossem "barreiras" dizendo onde cada bloco começa e acaba, isso permite támbem
+fundir blocos de uma maneira mais rapida.
+
+Sobre reaproveitamento de alocação temos algumas tecnicas como
+Ver entre nossa lista de blocos livre qual eh aquele bloco que se encaixa com a 
+solicitação do usuario sem deixar sobras de memoria;
+Quando um bloco é maior do que o necessario, ele é divido e a sobra fica livre para
+futuras alocações caso seja grande o bastante, ou então até fundida com outros blocos;
+Quando um free marco um bloco livre, ele verifica se os blocos adjacentes a ele na lista
+também estão livres, caso estejam, eles se fundem em um grande bloco, e caso esse bloco
+seja muito grande e esteja no topo da HEAP o alocador pode até recuar o BRK para devolver
+paginas ao S.O.
+
+O buddy system funciona com blocos de tamanho de potencia de 2, mantem uma lista para cada
+ordem de potencia de 2
+Para a alocação, o alocador busca um bloco livre de tamanho 2^i se nao houver, procura um 
+bloco livre de 2^k com k > i, e divide o bloco em 2 parceiros "buddy", de tamanho 2^(k-1)
+um bloco vai para a lista de 2^(k-1) e outro vai se dividindo recursivamente até chegar em 2^i.
+
+Quando se da um free o algoritmo verifica se o buddy do bloco recem livre também esta livre
+e se estiver ambos são removidos da lista atual, fundidos em um unico bloco e vai se repitindo
+o processo em niveis superiores enquanto houver um novo buddy livre.
